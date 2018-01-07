@@ -24,10 +24,54 @@
       <Extensions>moc;h;cpp</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{b3d72978-42de-46eb-9263-ca57bafb730c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\VCG">
+      <UniqueIdentifier>{6f29a5ee-fc30-4cff-a113-9b697cbffe05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Util">
+      <UniqueIdentifier>{0eec4654-661a-4ada-a3ce-2c17d77f777b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Src\MeshDoc.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\vcglib\wrap\ply\plylib.cpp">
+      <Filter>Src\VCG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\PCEst.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\flog.cpp">
+      <Filter>Src\Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Src\MeshDoc.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\vcglib\wrap\io_trimesh\export.h">
+      <Filter>Src\VCG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\vcglib\wrap\io_trimesh\import.h">
+      <Filter>Src\VCG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\vcglib\wrap\ply\plylib.h">
+      <Filter>Src\VCG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\PCEst.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\flog.h">
+      <Filter>Src\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\JetColorMap.h">
+      <Filter>Src\Util</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
