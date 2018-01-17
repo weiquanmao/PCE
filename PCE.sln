@@ -7,6 +7,17 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PCE", "PCE\PCE.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PCPre", "PCPre\PCPre.vcxproj", "{2030ABD0-2645-4398-9202-975B048CA0C1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Matlab", "Matlab", "{E4C9CB61-64BD-472A-B377-38BB40284AF8}"
+	ProjectSection(SolutionItems) = preProject
+		Matlab\PCEstimation.m = Matlab\PCEstimation.m
+		Matlab\PCEstMain.m = Matlab\PCEstMain.m
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{361E4007-5C46-4835-A49C-73CDE033FCF7}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
