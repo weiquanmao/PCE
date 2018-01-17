@@ -9,6 +9,12 @@
 
 PCEst is a general tool for **accuracy** and **completeness** estimation of point cloud, which is designed for evaluation of reconstruction algorithms.
 
+## Projects
+
+* PCPre : preprocessing for ground truth model *G*.
+* PCE : register reference model *R* to ground truth model *G* and estimate the min distances from both *R* to *G* and *G* to *R*.
+* Matlab : deal with the min distances and give the accuracy and completeness evaluations, as well as the F-scores.
+
 ## Dependence
 
 + [Qt](www.qt.io/download/)
