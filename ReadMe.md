@@ -9,13 +9,11 @@
 
 PCEst is a general tool for **accuracy** and **completeness** estimation of point cloud, which is designed for evaluation of reconstruction algorithms.
 
-## Methods
+## Dependence
 
-### Registering
++ [Qt](www.qt.io/download/)
++ [VCGLib](https://github.com/cdcseacave/VCG) (Embedded)
++ [CPD](https://github.com/gadomski/cpd) - Coherent Point Drift
 
-### Accuracy
 
-### Completeness
-
-### F-score
-
+[**Coherent Point Drift (CPD)**](https://github.com/gadomski/cpd) is employed for registering. The ground truth model *G* and reference model *R* are first sampled to 1K, then *R* is registered to *G* with CPD, where multiple initial orientations are tested.
