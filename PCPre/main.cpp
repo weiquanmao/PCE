@@ -17,6 +17,7 @@ void PCReColor(
     const unsigned int R, 
     const unsigned int G, 
     const unsigned int B);
+
 int main()
 {
     const std::string GreenDir = InputDir + "/Green";

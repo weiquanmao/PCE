@@ -450,6 +450,7 @@ double PCNearestDist(
         unsigned int idx;
         float dist;
         KDTree.doQueryClosest(p, idx, dist);
+        dist = sqrt(dist);
         errors.push_back(dist);
         miu += dist;
         var += dist*dist;
@@ -487,6 +488,7 @@ void PCSaveErrorCodee(
         unsigned int idx;
         float dist;
         KDTree.doQueryClosest(p, idx, dist);
+        dist = sqrt(dist);
         float fcode = abs(dist / maxe);
         if (fcode > 1)
             fcode = 1;
