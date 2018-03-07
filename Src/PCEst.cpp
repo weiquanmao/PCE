@@ -22,7 +22,7 @@ using namespace tri;
 
 namespace GlobParam
 {
-    const int    _GSampleNum     = 1000;
+    const int    _GSampleNum     = 2000;
     const int    _GTryDirectionN = 6;
     const int    _GTryRotationN  = 4;
     const double _GMaxError      = 0.05;
