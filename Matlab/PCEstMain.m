@@ -2,9 +2,9 @@ clc;
 clear all;
 close all;
 
-Dir_Error  = 'E:/GitHub/Wei/PCE/Data/Result';
-Dir_Box    = 'E:/Data/PCEst';
-Dir_Out    = 'E:/GitHub/Wei/PCE/Data/Result';
+Dir_Error  = '../TestData/Result';
+Dir_Box    = '../TestData/GT';
+Dir_Out    = '../TestData/Result';
 
 Targets  = {...
     'cube';...

@@ -1,0 +1,784 @@
+> ../TestData/Model/cube.ply
+> ../TestData/GT/cube.ply
+
+
+    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   
+   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       
+  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            
+ /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         
+                                                     |  Email: weiqm@buaa.edu.cn         
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ +------------------------------------------------------+
+ | PARAMETERS IN USE:                                   |
+ |------------------------------------------------------|
+ | [_GSampleNum                 ]:       < 00001000 >   |
+ | [_GTryDirectionN             ]:       < 00000006 >   |
+ | [_GTryRotationN              ]:       < 00000004 >   |
+ | [_GMaxError                  ]:       < 0000.050 >   |
+ +------------------------------------------------------+
+ +------------------------------------------------------+
+ |          USE OPENMP: 08 THREAD(s) ARE USED.          |
+ +------------------------------------------------------+
+>> Loading Ply ...
+  [+ Loading   ../TestData/GT/cube.ply  
+  [- Load Done.
+  [+ Loading   ../TestData/Model/cube.ply  
+  [- Load Done.
+>> Loading Done in 0.2580 Seconds.
+>> Down Sampling to 1000 NPts ...
+  [+ Sampling with   49748   NPts  
+  [- Sample Done by   999   NPts  
+  [+ Sampling with   45915   NPts  
+  [- Sample Done by   995   NPts  
+>> Sample Done in 0.6410 Seconds.
+>> Registering with 6 Direction and 4 Rotations ...
+  [+ Coherent Point Drift Point Set Registering ... 
+   [- [ 1.1985] : Origin (0,0).
+   [- [ 1.1976] : Rotation (120,0).
+   [- [ 1.1435] : Rotation (0,0).
+   [- [ 1.1984] : Rotation (180,0).
+   [- [ 1.1984] : Rotation (300,0).
+   [- [ 1.1995] : Rotation (240,0).
+   [- [ 1.2163] : Rotation (60,0).
+   [- [ 0.5341] : Rotation (180,45).
+   [- [ 1.2224] : Rotation (120,45).
+   [- [ 1.2170] : Rotation (0,45).
+   [- [ 0.5340] : Rotation (180,90).
+   [- [ 1.1996] : Rotation (240,45).
+   [- [ 1.2224] : Rotation (300,45).
+   [- [ 1.2155] : Rotation (60,45).
+   [- [ 0.5339] : Rotation (0,90).
+   [- [ 0.5339] : Rotation (180,135).
+   [- [ 1.2217] : Rotation (120,90).
+   [- [ 1.2108] : Rotation (300,90).
+   [- [ 0.5339] : Rotation (0,135).
+   [- [ 1.2130] : Rotation (60,90).
+   [- [ 1.1987] : Rotation (240,90).
+   [- [ 1.2220] : Rotation (120,135).
+   [- [ 1.2220] : Rotation (300,135).
+   [- [ 1.2124] : Rotation (60,135).
+   [- [ 1.2124] : Rotation (240,135).
+   [- [ 0.5339] : Final Transform£º
+      ----------------------------------
+      [0.914]  [0.371]  [-0.165] [-12.841]
+      [0.403]  [-0.782]  [0.475] [17.963]
+      [0.048]  [-0.501]  [-0.864] [-38.837]
+      [0.000]  [0.000]  [0.000] [2.860]
+  [- Registration Done. 
+>> Registration Done in 58.9580 Seconds.
+>> Save Result Ply ...
+   > Save Registered Ply ... 
+  [+ Saving   ../TestData/Result/cube_Rged.ply  
+  [- Save Done.
+   > Save Registered Ply with Jet Color and Chosen Color ... 
+  [+ Save with Error Color Coded [  0.871055  ]... 
+   > Save Error Color Coded Ply   ../TestData/Result/cube_RgedJet.ply  ... 
+  [+ Saving   ../TestData/Result/cube_RgedJet.ply  
+  [- Save Done.
+   > Save Colored Ply   ../TestData/Result/cube_RgedClr.ply  ... 
+  [+ Saving   ../TestData/Result/cube_RgedClr.ply  
+  [- Save Done.
+  [- Done.
+>> Save Done in 0.3830 Seconds.
+>> Estmate PC Accuray and Completeness ...
+   > Sampling S Ply Data ...
+  [+ Sampling with   49748   NPts  
+  [- Sample Done by   45798   NPts  
+   > Estimate R to S ...
+  [+ Save Recorder in   ../TestData/Result/cube_R2S.txt   ... 
+  [- Save Done.
+   > Estimate S to R ...
+  [+ Save Recorder in   ../TestData/Result/cube_S2R.txt   ... 
+  [- Save Done.
+>> Estmation Done in 0.9350 Seconds.
+
+
+----------------------
+
+> ../TestData/Model/dsp.ply
+> ../TestData/GT/dsp.ply
+
+
+    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   
+   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       
+  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            
+ /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         
+                                                     |  Email: weiqm@buaa.edu.cn         
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ +------------------------------------------------------+
+ | PARAMETERS IN USE:                                   |
+ |------------------------------------------------------|
+ | [_GSampleNum                 ]:       < 00001000 >   |
+ | [_GTryDirectionN             ]:       < 00000006 >   |
+ | [_GTryRotationN              ]:       < 00000004 >   |
+ | [_GMaxError                  ]:       < 0000.050 >   |
+ +------------------------------------------------------+
+ +------------------------------------------------------+
+ |          USE OPENMP: 08 THREAD(s) ARE USED.          |
+ +------------------------------------------------------+
+>> Loading Ply ...
+  [+ Loading   ../TestData/GT/dsp.ply  
+  [- Load Done.
+  [+ Loading   ../TestData/Model/dsp.ply  
+  [- Load Done.
+>> Loading Done in 0.1790 Seconds.
+>> Down Sampling to 1000 NPts ...
+  [+ Sampling with   47053   NPts  
+  [- Sample Done by   1001   NPts  
+  [+ Sampling with   23511   NPts  
+  [- Sample Done by   1003   NPts  
+>> Sample Done in 0.3290 Seconds.
+>> Registering with 6 Direction and 4 Rotations ...
+  [+ Coherent Point Drift Point Set Registering ... 
+   [- [ 1.5693] : Origin (0,0).
+   [- [ 1.5725] : Rotation (120,0).
+   [- [ 1.5624] : Rotation (180,0).
+   [- [ 1.5824] : Rotation (60,0).
+   [- [ 1.5786] : Rotation (120,45).
+   [- [ 1.5639] : Rotation (300,0).
+   [- [ 1.5658] : Rotation (240,0).
+   [- [ 0.4648] : Rotation (180,45).
+   [- [ 1.5256] : Rotation (300,45).
+   [- [ 1.5746] : Rotation (60,45).
+   [- [ 1.5838] : Rotation (0,0).
+   [- [ 1.5786] : Rotation (120,90).
+   [- [ 1.5460] : Rotation (240,45).
+   [- [ 1.5304] : Rotation (300,90).
+   [- [ 0.4648] : Rotation (180,90).
+   [- [ 1.5237] : Rotation (120,135).
+   [- [ 1.5237] : Rotation (300,135).
+   [- [ 1.5836] : Rotation (60,90).
+   [- [ 0.4649] : Rotation (180,135).
+   [- [ 1.5755] : Rotation (0,45).
+   [- [ 1.5662] : Rotation (240,90).
+   [- [ 1.5643] : Rotation (60,135).
+   [- [ 0.4651] : Rotation (0,90).
+   [- [ 1.5643] : Rotation (240,135).
+   [- [ 0.4649] : Rotation (0,135).
+   [- [ 0.4648] : Final Transform£º
+      ----------------------------------
+      [0.910]  [-0.314]  [0.270] [25.386]
+      [-0.386]  [-0.879]  [0.279] [-21.178]
+      [0.149]  [-0.358]  [-0.922] [29.049]
+      [0.000]  [0.000]  [0.000] [3.105]
+  [- Registration Done. 
+>> Registration Done in 55.4100 Seconds.
+>> Save Result Ply ...
+   > Save Registered Ply ... 
+  [+ Saving   ../TestData/Result/dsp_Rged.ply  
+  [- Save Done.
+   > Save Registered Ply with Jet Color and Chosen Color ... 
+  [+ Save with Error Color Coded [  0.99996  ]... 
+   > Save Error Color Coded Ply   ../TestData/Result/dsp_RgedJet.ply  ... 
+  [+ Saving   ../TestData/Result/dsp_RgedJet.ply  
+  [- Save Done.
+   > Save Colored Ply   ../TestData/Result/dsp_RgedClr.ply  ... 
+  [+ Saving   ../TestData/Result/dsp_RgedClr.ply  
+  [- Save Done.
+  [- Done.
+>> Save Done in 0.2200 Seconds.
+>> Estmate PC Accuray and Completeness ...
+   > Sampling S Ply Data ...
+  [+ Sampling with   47053   NPts  
+  [- Sample Done by   23541   NPts  
+   > Estimate R to S ...
+  [+ Save Recorder in   ../TestData/Result/dsp_R2S.txt   ... 
+  [- Save Done.
+   > Estimate S to R ...
+  [+ Save Recorder in   ../TestData/Result/dsp_S2R.txt   ... 
+  [- Save Done.
+>> Estmation Done in 0.7110 Seconds.
+
+
+----------------------
+
+> ../TestData/Model/gps.ply
+> ../TestData/GT/gps.ply
+
+
+    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   
+   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       
+  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            
+ /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         
+                                                     |  Email: weiqm@buaa.edu.cn         
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ +------------------------------------------------------+
+ | PARAMETERS IN USE:                                   |
+ |------------------------------------------------------|
+ | [_GSampleNum                 ]:       < 00001000 >   |
+ | [_GTryDirectionN             ]:       < 00000006 >   |
+ | [_GTryRotationN              ]:       < 00000004 >   |
+ | [_GMaxError                  ]:       < 0000.050 >   |
+ +------------------------------------------------------+
+ +------------------------------------------------------+
+ |          USE OPENMP: 08 THREAD(s) ARE USED.          |
+ +------------------------------------------------------+
+>> Loading Ply ...
+  [+ Loading   ../TestData/GT/gps.ply  
+  [- Load Done.
+  [+ Loading   ../TestData/Model/gps.ply  
+  [- Load Done.
+>> Loading Done in 0.1780 Seconds.
+>> Down Sampling to 1000 NPts ...
+  [+ Sampling with   50242   NPts  
+  [- Sample Done by   1001   NPts  
+  [+ Sampling with   22744   NPts  
+  [- Sample Done by   1001   NPts  
+>> Sample Done in 0.5500 Seconds.
+>> Registering with 6 Direction and 4 Rotations ...
+  [+ Coherent Point Drift Point Set Registering ... 
+   [- [ 0.6056] : Origin (0,0).
+   [- [ 0.6058] : Rotation (300,0).
+   [- [ 0.6055] : Rotation (0,0).
+   [- [ 0.6058] : Rotation (240,0).
+   [- [ 0.6781] : Rotation (180,0).
+   [- [ 0.5262] : Rotation (60,0).
+   [- [ 0.5261] : Rotation (120,0).
+   [- [ 0.6057] : Rotation (300,45).
+   [- [ 0.6055] : Rotation (0,45).
+   [- [ 0.6781] : Rotation (180,45).
+   [- [ 0.6056] : Rotation (240,45).
+   [- [ 0.5262] : Rotation (60,45).
+   [- [ 0.5261] : Rotation (120,45).
+   [- [ 0.6055] : Rotation (300,90).
+   [- [ 0.6055] : Rotation (0,90).
+   [- [ 0.6781] : Rotation (180,90).
+   [- [ 0.6780] : Rotation (240,90).
+   [- [ 0.5263] : Rotation (60,90).
+   [- [ 0.5261] : Rotation (120,90).
+   [- [ 0.6781] : Rotation (0,135).
+   [- [ 0.5261] : Rotation (300,135).
+   [- [ 0.6781] : Rotation (180,135).
+   [- [ 0.5262] : Rotation (240,135).
+   [- [ 0.5262] : Rotation (60,135).
+   [- [ 0.5261] : Rotation (120,135).
+   [- [ 0.5261] : Final Transform£º
+      ----------------------------------
+      [-0.442]  [0.003]  [0.897] [43.375]
+      [-0.003]  [1.000]  [-0.005] [-0.012]
+      [-0.897]  [-0.005]  [-0.442] [13.010]
+      [0.000]  [0.000]  [0.000] [2.985]
+  [- Registration Done. 
+>> Registration Done in 42.1580 Seconds.
+>> Save Result Ply ...
+   > Save Registered Ply ... 
+  [+ Saving   ../TestData/Result/gps_Rged.ply  
+  [- Save Done.
+   > Save Registered Ply with Jet Color and Chosen Color ... 
+  [+ Save with Error Color Coded [  0.671225  ]... 
+   > Save Error Color Coded Ply   ../TestData/Result/gps_RgedJet.ply  ... 
+  [+ Saving   ../TestData/Result/gps_RgedJet.ply  
+  [- Save Done.
+   > Save Colored Ply   ../TestData/Result/gps_RgedClr.ply  ... 
+  [+ Saving   ../TestData/Result/gps_RgedClr.ply  
+  [- Save Done.
+  [- Done.
+>> Save Done in 0.2160 Seconds.
+>> Estmate PC Accuray and Completeness ...
+   > Sampling S Ply Data ...
+  [+ Sampling with   50242   NPts  
+  [- Sample Done by   22734   NPts  
+   > Estimate R to S ...
+  [+ Save Recorder in   ../TestData/Result/gps_R2S.txt   ... 
+  [- Save Done.
+   > Estimate S to R ...
+  [+ Save Recorder in   ../TestData/Result/gps_S2R.txt   ... 
+  [- Save Done.
+>> Estmation Done in 0.6670 Seconds.
+
+
+----------------------
+
+> ../TestData/Model/helios.ply
+> ../TestData/GT/helios.ply
+
+
+    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   
+   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       
+  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            
+ /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         
+                                                     |  Email: weiqm@buaa.edu.cn         
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ +------------------------------------------------------+
+ | PARAMETERS IN USE:                                   |
+ |------------------------------------------------------|
+ | [_GSampleNum                 ]:       < 00001000 >   |
+ | [_GTryDirectionN             ]:       < 00000006 >   |
+ | [_GTryRotationN              ]:       < 00000004 >   |
+ | [_GMaxError                  ]:       < 0000.050 >   |
+ +------------------------------------------------------+
+ +------------------------------------------------------+
+ |          USE OPENMP: 08 THREAD(s) ARE USED.          |
+ +------------------------------------------------------+
+>> Loading Ply ...
+  [+ Loading   ../TestData/GT/helios.ply  
+  [- Load Done.
+  [+ Loading   ../TestData/Model/helios.ply  
+  [- Load Done.
+>> Loading Done in 0.1360 Seconds.
+>> Down Sampling to 1000 NPts ...
+  [+ Sampling with   49885   NPts  
+  [- Sample Done by   996   NPts  
+  [+ Sampling with   10776   NPts  
+  [- Sample Done by   1005   NPts  
+>> Sample Done in 0.2830 Seconds.
+>> Registering with 6 Direction and 4 Rotations ...
+  [+ Coherent Point Drift Point Set Registering ... 
+   [- [ 1.4667] : Origin (0,0).
+   [- [ 1.4655] : Rotation (60,0).
+   [- [ 1.4647] : Rotation (120,0).
+   [- [ 1.4428] : Rotation (300,0).
+   [- [ 1.4434] : Rotation (240,0).
+   [- [ 1.4443] : Rotation (180,0).
+   [- [ 1.4445] : Rotation (0,0).
+   [- [ 1.4665] : Rotation (60,45).
+   [- [ 1.4653] : Rotation (120,45).
+   [- [ 1.4451] : Rotation (300,45).
+   [- [ 1.4457] : Rotation (240,45).
+   [- [ 0.3802] : Rotation (180,45).
+   [- [ 1.4468] : Rotation (0,45).
+   [- [ 1.4665] : Rotation (60,90).
+   [- [ 1.4675] : Rotation (120,90).
+   [- [ 1.4449] : Rotation (300,90).
+   [- [ 1.4439] : Rotation (240,90).
+   [- [ 0.3801] : Rotation (180,90).
+   [- [ 0.3801] : Rotation (0,90).
+   [- [ 1.4669] : Rotation (60,135).
+   [- [ 1.4669] : Rotation (240,135).
+   [- [ 1.4430] : Rotation (120,135).
+   [- [ 1.4430] : Rotation (300,135).
+   [- [ 0.3802] : Rotation (180,135).
+   [- [ 0.3802] : Rotation (0,135).
+   [- [ 0.3801] : Final Transform£º
+      ----------------------------------
+      [0.643]  [0.013]  [-0.766] [-39.962]
+      [0.002]  [-1.000]  [-0.016] [-1.617]
+      [-0.766]  [0.009]  [-0.643] [-40.992]
+      [0.000]  [0.000]  [0.000] [4.122]
+  [- Registration Done. 
+>> Registration Done in 29.6210 Seconds.
+>> Save Result Ply ...
+   > Save Registered Ply ... 
+  [+ Saving   ../TestData/Result/helios_Rged.ply  
+  [- Save Done.
+   > Save Registered Ply with Jet Color and Chosen Color ... 
+  [+ Save with Error Color Coded [  0.401779  ]... 
+   > Save Error Color Coded Ply   ../TestData/Result/helios_RgedJet.ply  ... 
+  [+ Saving   ../TestData/Result/helios_RgedJet.ply  
+  [- Save Done.
+   > Save Colored Ply   ../TestData/Result/helios_RgedClr.ply  ... 
+  [+ Saving   ../TestData/Result/helios_RgedClr.ply  
+  [- Save Done.
+  [- Done.
+>> Save Done in 0.1190 Seconds.
+>> Estmate PC Accuray and Completeness ...
+   > Sampling S Ply Data ...
+  [+ Sampling with   49885   NPts  
+  [- Sample Done by   10730   NPts  
+   > Estimate R to S ...
+  [+ Save Recorder in   ../TestData/Result/helios_R2S.txt   ... 
+  [- Save Done.
+   > Estimate S to R ...
+  [+ Save Recorder in   ../TestData/Result/helios_S2R.txt   ... 
+  [- Save Done.
+>> Estmation Done in 0.5740 Seconds.
+
+
+----------------------
+
+> ../TestData/Model/minisat.ply
+> ../TestData/GT/minisat.ply
+
+
+    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   
+   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       
+  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            
+ /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         
+                                                     |  Email: weiqm@buaa.edu.cn         
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ +------------------------------------------------------+
+ | PARAMETERS IN USE:                                   |
+ |------------------------------------------------------|
+ | [_GSampleNum                 ]:       < 00001000 >   |
+ | [_GTryDirectionN             ]:       < 00000006 >   |
+ | [_GTryRotationN              ]:       < 00000004 >   |
+ | [_GMaxError                  ]:       < 0000.050 >   |
+ +------------------------------------------------------+
+ +------------------------------------------------------+
+ |          USE OPENMP: 08 THREAD(s) ARE USED.          |
+ +------------------------------------------------------+
+>> Loading Ply ...
+  [+ Loading   ../TestData/GT/minisat.ply  
+  [- Load Done.
+  [+ Loading   ../TestData/Model/minisat.ply  
+  [- Load Done.
+>> Loading Done in 0.1590 Seconds.
+>> Down Sampling to 1000 NPts ...
+  [+ Sampling with   49960   NPts  
+  [- Sample Done by   1004   NPts  
+  [+ Sampling with   15406   NPts  
+  [- Sample Done by   1000   NPts  
+>> Sample Done in 0.4490 Seconds.
+>> Registering with 6 Direction and 4 Rotations ...
+  [+ Coherent Point Drift Point Set Registering ... 
+   [- [ 0.8216] : Origin (0,0).
+   [- [ 0.8211] : Rotation (240,0).
+   [- [ 0.8196] : Rotation (300,0).
+   [- [ 0.8196] : Rotation (60,0).
+   [- [ 0.8211] : Rotation (120,0).
+   [- [ 0.8210] : Rotation (180,0).
+   [- [ 0.8196] : Rotation (0,0).
+   [- [ 1.0774] : Rotation (180,45).
+   [- [ 0.6002] : Rotation (120,45).
+   [- [ 0.6004] : Rotation (120,90).
+   [- [ 0.8211] : Rotation (240,45).
+   [- [ 0.5632] : Rotation (180,90).
+   [- [ 0.8196] : Rotation (300,45).
+   [- [ 0.6006] : Rotation (120,135).
+   [- [ 0.5657] : Rotation (180,135).
+   [- [ 0.6000] : Rotation (60,45).
+   [- [ 1.0784] : Rotation (0,45).
+   [- [ 0.8340] : Rotation (240,90).
+   [- [ 0.5645] : Rotation (0,90).
+   [- [ 1.0647] : Rotation (300,90).
+   [- [ 0.6000] : Rotation (60,90).
+   [- [ 0.5657] : Rotation (0,135).
+   [- [ 0.6006] : Rotation (300,135).
+   [- [ 0.6001] : Rotation (240,135).
+   [- [ 0.6001] : Rotation (60,135).
+   [- [ 0.5632] : Final Transform£º
+      ----------------------------------
+      [0.814]  [0.007]  [-0.580] [39.761]
+      [0.018]  [-1.000]  [0.013] [0.188]
+      [-0.580]  [-0.021]  [-0.814] [21.756]
+      [0.000]  [0.000]  [0.000] [17.600]
+  [- Registration Done. 
+>> Registration Done in 102.4530 Seconds.
+>> Save Result Ply ...
+   > Save Registered Ply ... 
+  [+ Saving   ../TestData/Result/minisat_Rged.ply  
+  [- Save Done.
+   > Save Registered Ply with Jet Color and Chosen Color ... 
+  [+ Save with Error Color Coded [  0.400704  ]... 
+   > Save Error Color Coded Ply   ../TestData/Result/minisat_RgedJet.ply  ... 
+  [+ Saving   ../TestData/Result/minisat_RgedJet.ply  
+  [- Save Done.
+   > Save Colored Ply   ../TestData/Result/minisat_RgedClr.ply  ... 
+  [+ Saving   ../TestData/Result/minisat_RgedClr.ply  
+  [- Save Done.
+  [- Done.
+>> Save Done in 0.1560 Seconds.
+>> Estmate PC Accuray and Completeness ...
+   > Sampling S Ply Data ...
+  [+ Sampling with   49960   NPts  
+  [- Sample Done by   15359   NPts  
+   > Estimate R to S ...
+  [+ Save Recorder in   ../TestData/Result/minisat_R2S.txt   ... 
+  [- Save Done.
+   > Estimate S to R ...
+  [+ Save Recorder in   ../TestData/Result/minisat_S2R.txt   ... 
+  [- Save Done.
+>> Estmation Done in 0.6400 Seconds.
+
+
+----------------------
+
+> ../TestData/Model/radarsat.ply
+> ../TestData/GT/radarsat.ply
+
+
+    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   
+   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       
+  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            
+ /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         
+                                                     |  Email: weiqm@buaa.edu.cn         
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ +------------------------------------------------------+
+ | PARAMETERS IN USE:                                   |
+ |------------------------------------------------------|
+ | [_GSampleNum                 ]:       < 00001000 >   |
+ | [_GTryDirectionN             ]:       < 00000006 >   |
+ | [_GTryRotationN              ]:       < 00000004 >   |
+ | [_GMaxError                  ]:       < 0000.050 >   |
+ +------------------------------------------------------+
+ +------------------------------------------------------+
+ |          USE OPENMP: 08 THREAD(s) ARE USED.          |
+ +------------------------------------------------------+
+>> Loading Ply ...
+  [+ Loading   ../TestData/GT/radarsat.ply  
+  [- Load Done.
+  [+ Loading   ../TestData/Model/radarsat.ply  
+  [- Load Done.
+>> Loading Done in 0.1750 Seconds.
+>> Down Sampling to 1000 NPts ...
+  [+ Sampling with   48293   NPts  
+  [- Sample Done by   997   NPts  
+  [+ Sampling with   28314   NPts  
+  [- Sample Done by   997   NPts  
+>> Sample Done in 0.2630 Seconds.
+>> Registering with 6 Direction and 4 Rotations ...
+  [+ Coherent Point Drift Point Set Registering ... 
+   [- [ 1.0066] : Origin (0,0).
+   [- [ 1.0066] : Rotation (240,0).
+   [- [ 1.0067] : Rotation (300,0).
+   [- [ 1.0081] : Rotation (60,0).
+   [- [ 1.0083] : Rotation (120,0).
+   [- [ 1.0068] : Rotation (0,0).
+   [- [ 1.0066] : Rotation (180,0).
+   [- [ 1.0065] : Rotation (240,45).
+   [- [ 1.0066] : Rotation (300,45).
+   [- [ 1.0083] : Rotation (60,45).
+   [- [ 1.0082] : Rotation (120,45).
+   [- [ 1.0071] : Rotation (0,45).
+   [- [ 1.0070] : Rotation (180,45).
+   [- [ 1.0082] : Rotation (60,90).
+   [- [ 1.0065] : Rotation (240,90).
+   [- [ 1.0068] : Rotation (300,90).
+   [- [ 1.0083] : Rotation (120,90).
+   [- [ 1.0082] : Rotation (60,135).
+   [- [ 1.0082] : Rotation (240,135).
+   [- [ 1.0082] : Rotation (300,135).
+   [- [ 1.0082] : Rotation (120,135).
+   [- [ 0.5284] : Rotation (0,90).
+   [- [ 0.5285] : Rotation (180,90).
+   [- [ 0.5285] : Rotation (0,135).
+   [- [ 0.5285] : Rotation (180,135).
+   [- [ 0.5284] : Final Transform£º
+      ----------------------------------
+      [0.070]  [0.013]  [-0.997] [-36.759]
+      [0.004]  [-1.000]  [-0.013] [-0.028]
+      [-0.998]  [-0.003]  [-0.070] [30.197]
+      [0.000]  [0.000]  [0.000] [8.531]
+  [- Registration Done. 
+>> Registration Done in 36.9070 Seconds.
+>> Save Result Ply ...
+   > Save Registered Ply ... 
+  [+ Saving   ../TestData/Result/radarsat_Rged.ply  
+  [- Save Done.
+   > Save Registered Ply with Jet Color and Chosen Color ... 
+  [+ Save with Error Color Coded [  0.358923  ]... 
+   > Save Error Color Coded Ply   ../TestData/Result/radarsat_RgedJet.ply  ... 
+  [+ Saving   ../TestData/Result/radarsat_RgedJet.ply  
+  [- Save Done.
+   > Save Colored Ply   ../TestData/Result/radarsat_RgedClr.ply  ... 
+  [+ Saving   ../TestData/Result/radarsat_RgedClr.ply  
+  [- Save Done.
+  [- Done.
+>> Save Done in 0.2500 Seconds.
+>> Estmate PC Accuray and Completeness ...
+   > Sampling S Ply Data ...
+  [+ Sampling with   48293   NPts  
+  [- Sample Done by   28233   NPts  
+   > Estimate R to S ...
+  [+ Save Recorder in   ../TestData/Result/radarsat_R2S.txt   ... 
+  [- Save Done.
+   > Estimate S to R ...
+  [+ Save Recorder in   ../TestData/Result/radarsat_S2R.txt   ... 
+  [- Save Done.
+>> Estmation Done in 0.7330 Seconds.
+
+
+----------------------
+
+> ../TestData/Model/scisat.ply
+> ../TestData/GT/scisat.ply
+
+
+    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   
+   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       
+  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            
+ /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         
+                                                     |  Email: weiqm@buaa.edu.cn         
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ +------------------------------------------------------+
+ | PARAMETERS IN USE:                                   |
+ |------------------------------------------------------|
+ | [_GSampleNum                 ]:       < 00001000 >   |
+ | [_GTryDirectionN             ]:       < 00000006 >   |
+ | [_GTryRotationN              ]:       < 00000004 >   |
+ | [_GMaxError                  ]:       < 0000.050 >   |
+ +------------------------------------------------------+
+ +------------------------------------------------------+
+ |          USE OPENMP: 08 THREAD(s) ARE USED.          |
+ +------------------------------------------------------+
+>> Loading Ply ...
+  [+ Loading   ../TestData/GT/scisat.ply  
+  [- Load Done.
+  [+ Loading   ../TestData/Model/scisat.ply  
+  [- Load Done.
+>> Loading Done in 0.1610 Seconds.
+>> Down Sampling to 1000 NPts ...
+  [+ Sampling with   49499   NPts  
+  [- Sample Done by   1005   NPts  
+  [+ Sampling with   20250   NPts  
+  [- Sample Done by   1004   NPts  
+>> Sample Done in 0.3070 Seconds.
+>> Registering with 6 Direction and 4 Rotations ...
+  [+ Coherent Point Drift Point Set Registering ... 
+   [- [ 0.9034] : Origin (0,0).
+   [- [ 0.9027] : Rotation (0,0).
+   [- [ 0.6769] : Rotation (60,0).
+   [- [ 0.6770] : Rotation (120,0).
+   [- [ 0.6733] : Rotation (60,45).
+   [- [ 0.8633] : Rotation (0,45).
+   [- [ 0.6745] : Rotation (120,45).
+   [- [ 0.8640] : Rotation (180,0).
+   [- [ 0.8305] : Rotation (240,0).
+   [- [ 0.8308] : Rotation (300,0).
+   [- [ 0.8724] : Rotation (0,90).
+   [- [ 0.8727] : Rotation (0,135).
+   [- [ 0.8782] : Rotation (180,45).
+   [- [ 0.6715] : Rotation (120,90).
+   [- [ 0.8207] : Rotation (300,45).
+   [- [ 0.6715] : Rotation (60,90).
+   [- [ 0.8208] : Rotation (240,45).
+   [- [ 0.8620] : Rotation (180,90).
+   [- [ 0.8727] : Rotation (180,135).
+   [- [ 0.8403] : Rotation (300,90).
+   [- [ 0.8413] : Rotation (240,90).
+   [- [ 0.8528] : Rotation (120,135).
+   [- [ 0.8525] : Rotation (60,135).
+   [- [ 0.8528] : Rotation (300,135).
+   [- [ 0.8525] : Rotation (240,135).
+   [- [ 0.6715] : Final Transform£º
+      ----------------------------------
+      [0.186]  [-0.005]  [0.983] [34.593]
+      [-0.000]  [1.000]  [0.005] [-0.295]
+      [-0.983]  [-0.001]  [0.186] [28.403]
+      [0.000]  [0.000]  [0.000] [2.978]
+  [- Registration Done. 
+>> Registration Done in 98.9070 Seconds.
+>> Save Result Ply ...
+   > Save Registered Ply ... 
+  [+ Saving   ../TestData/Result/scisat_Rged.ply  
+  [- Save Done.
+   > Save Registered Ply with Jet Color and Chosen Color ... 
+  [+ Save with Error Color Coded [  0.62637  ]... 
+   > Save Error Color Coded Ply   ../TestData/Result/scisat_RgedJet.ply  ... 
+  [+ Saving   ../TestData/Result/scisat_RgedJet.ply  
+  [- Save Done.
+   > Save Colored Ply   ../TestData/Result/scisat_RgedClr.ply  ... 
+  [+ Saving   ../TestData/Result/scisat_RgedClr.ply  
+  [- Save Done.
+  [- Done.
+>> Save Done in 0.2040 Seconds.
+>> Estmate PC Accuray and Completeness ...
+   > Sampling S Ply Data ...
+  [+ Sampling with   49499   NPts  
+  [- Sample Done by   20178   NPts  
+   > Estimate R to S ...
+  [+ Save Recorder in   ../TestData/Result/scisat_R2S.txt   ... 
+  [- Save Done.
+   > Estimate S to R ...
+  [+ Save Recorder in   ../TestData/Result/scisat_S2R.txt   ... 
+  [- Save Done.
+>> Estmation Done in 0.5330 Seconds.
+
+
+----------------------
+
+> ../TestData/Model/spot.ply
+> ../TestData/GT/spot.ply
+
+
+    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   
+   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       
+  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            
+ /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         
+                                                     |  Email: weiqm@buaa.edu.cn         
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ +------------------------------------------------------+
+ | PARAMETERS IN USE:                                   |
+ |------------------------------------------------------|
+ | [_GSampleNum                 ]:       < 00001000 >   |
+ | [_GTryDirectionN             ]:       < 00000006 >   |
+ | [_GTryRotationN              ]:       < 00000004 >   |
+ | [_GMaxError                  ]:       < 0000.050 >   |
+ +------------------------------------------------------+
+ +------------------------------------------------------+
+ |          USE OPENMP: 08 THREAD(s) ARE USED.          |
+ +------------------------------------------------------+
+>> Loading Ply ...
+  [+ Loading   ../TestData/GT/spot.ply  
+  [- Load Done.
+  [+ Loading   ../TestData/Model/spot.ply  
+  [- Load Done.
+>> Loading Done in 0.1360 Seconds.
+>> Down Sampling to 1000 NPts ...
+  [+ Sampling with   49812   NPts  
+  [- Sample Done by   1004   NPts  
+  [+ Sampling with   10125   NPts  
+  [- Sample Done by   1000   NPts  
+>> Sample Done in 0.2640 Seconds.
+>> Registering with 6 Direction and 4 Rotations ...
+  [+ Coherent Point Drift Point Set Registering ... 
+   [- [ 1.1099] : Origin (0,0).
+   [- [ 1.1136] : Rotation (60,0).
+   [- [ 1.1454] : Rotation (0,0).
+   [- [ 1.1217] : Rotation (300,0).
+   [- [ 1.1258] : Rotation (60,45).
+   [- [ 1.2522] : Rotation (180,0).
+   [- [ 1.2485] : Rotation (120,0).
+   [- [ 0.3036] : Rotation (0,45).
+   [- [ 1.2504] : Rotation (300,45).
+   [- [ 1.2486] : Rotation (240,0).
+   [- [ 1.2527] : Rotation (60,90).
+   [- [ 1.2495] : Rotation (180,45).
+   [- [ 0.3035] : Rotation (0,90).
+   [- [ 1.1391] : Rotation (240,45).
+   [- [ 1.2496] : Rotation (120,45).
+   [- [ 1.2508] : Rotation (300,90).
+   [- [ 0.3038] : Rotation (180,90).
+   [- [ 1.2507] : Rotation (60,135).
+   [- [ 0.3036] : Rotation (0,135).
+   [- [ 1.2522] : Rotation (240,90).
+   [- [ 1.2505] : Rotation (300,135).
+   [- [ 0.3036] : Rotation (180,135).
+   [- [ 1.3624] : Rotation (120,90).
+   [- [ 1.2507] : Rotation (240,135).
+   [- [ 1.2505] : Rotation (120,135).
+   [- [ 0.3035] : Final Transform£º
+      ----------------------------------
+      [0.953]  [0.004]  [0.303] [43.706]
+      [0.004]  [-1.000]  [-0.001] [0.038]
+      [0.303]  [0.003]  [-0.953] [14.881]
+      [0.000]  [0.000]  [0.000] [6.747]
+  [- Registration Done. 
+>> Registration Done in 41.0580 Seconds.
+>> Save Result Ply ...
+   > Save Registered Ply ... 
+  [+ Saving   ../TestData/Result/spot_Rged.ply  
+  [- Save Done.
+   > Save Registered Ply with Jet Color and Chosen Color ... 
+  [+ Save with Error Color Coded [  0.260203  ]... 
+   > Save Error Color Coded Ply   ../TestData/Result/spot_RgedJet.ply  ... 
+  [+ Saving   ../TestData/Result/spot_RgedJet.ply  
+  [- Save Done.
+   > Save Colored Ply   ../TestData/Result/spot_RgedClr.ply  ... 
+  [+ Saving   ../TestData/Result/spot_RgedClr.ply  
+  [- Save Done.
+  [- Done.
+>> Save Done in 0.1140 Seconds.
+>> Estmate PC Accuray and Completeness ...
+   > Sampling S Ply Data ...
+  [+ Sampling with   49812   NPts  
+  [- Sample Done by   10113   NPts  
+   > Estimate R to S ...
+  [+ Save Recorder in   ../TestData/Result/spot_R2S.txt   ... 
+  [- Save Done.
+   > Estimate S to R ...
+  [+ Save Recorder in   ../TestData/Result/spot_S2R.txt   ... 
+  [- Save Done.
+>> Estmation Done in 0.5890 Seconds.
+
+
+----------------------
+

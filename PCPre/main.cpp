@@ -9,7 +9,7 @@
 #include "MeshDoc.h"
 #include "PCA.h"
 
-const std::string InputDir = "E:/Data/PCEst";
+const std::string InputDir = "../TestData/GT";
 
 bool PCADimensions(CMeshO &mesh, const char *savePath);
 void PCReColor(

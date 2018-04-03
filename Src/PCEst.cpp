@@ -22,7 +22,7 @@ using namespace tri;
 
 namespace GlobParam
 {
-    const int    _GSampleNum     = 2000;
+    const int    _GSampleNum     = 1000;
     const int    _GTryDirectionN = 6;
     const int    _GTryRotationN  = 4;
     const double _GMaxError      = 0.05;
@@ -34,8 +34,8 @@ namespace GlobParam
         FLOG::flog(
             "\n\n"
             "    ______  ______         ______  ______  _______   |  PCEst - Point Cloud Estimation   \n"
-            "   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 1.0.0                       \n"
-            "  / ____/ / /___   /__/  / ___/  /___  /    / /      |  January 2018 @ IPC.BUAA          \n"
+            "   /  _  / / ____/  ___   / ____/ /  ___/ /__  __/   |  Ver. 2.0.0                       \n"
+            "  / ____/ / /___   /__/  / ___/  /___  /    / /      |  April 2018 @ IPC.BUAA            \n"
             " /_/     /_____/        /_____/ /_____/    /_/       |  By WeiQM                         \n"
             "                                                     |  Email: weiqm@buaa.edu.cn         \n"
             "\n"
@@ -131,7 +131,7 @@ SRT _PCRegister(MeshModel *SMM, MeshModel *RMM)
 }
 
 
-bool PCEst(const char *SPath, const char *RPath, const char *OutPath)
+bool PCEst(const char *SPath, const char *RPath, const char *OutPath, const bool bReg)
 {
     GlobParam::printLogo();
     GlobParam::printParams();
@@ -176,56 +176,86 @@ bool PCEst(const char *SPath, const char *RPath, const char *OutPath)
     FLOG::popIndent();
     FLOG::flog(">> Loading Done in %.4f Seconds.\n", GlobParam::GTimer.elapsed() / 1000.0);
 
-    
-    // II. Down Sample
-    FLOG::flog(">> Down Sampling to %d NPts ...\n", GlobParam::_GSampleNum);
-    FLOG::pushIndent();
-    GlobParam::GTimer.start();
-    //------------------------   
-    MeshModel *PlyS_Samp = PCSample(PlyS_ori, GlobParam::_GSampleNum);
-    MeshModel *PlyR_Samp = PCSample(PlyR_ori, GlobParam::_GSampleNum);
-    //------------------------
-    FLOG::popIndent();
-    FLOG::flog(">> Sample Done in %.4f Seconds.\n", GlobParam::GTimer.elapsed() / 1000.0);
+    if (bReg) {
+        // II. Down Sample
+        FLOG::flog(">> Down Sampling to %d NPts ...\n", GlobParam::_GSampleNum);
+        FLOG::pushIndent();
+        GlobParam::GTimer.start();
+        //------------------------   
+        MeshModel *PlyS_Samp = PCSample(PlyS_ori, GlobParam::_GSampleNum);
+        MeshModel *PlyR_Samp = PCSample(PlyR_ori, GlobParam::_GSampleNum);
+        //------------------------
+        FLOG::popIndent();
+        FLOG::flog(">> Sample Done in %.4f Seconds.\n", GlobParam::GTimer.elapsed() / 1000.0);
 
-    // III. Coherent Point Drift Point Set Registration 
-    // ~~~~~~~~~~~~~~~~~~
-    // Measuring Glacier Surface Velocities With LiDAR: A Comparison of Three-Dimensional Change Detection Methods.
-    // Master's thesis, University of Houston, Geosensing Systems Engineering and Sciences.
-    // by Gadomski, P.J. (December 2016). 
-    // ~~~~~~~~~~~~~~~~~~
-    // PDF See : https://www.researchgate.net/publication/315773214_Measuring_Glacier_Surface_Velocities_With_LiDAR_A_Comparison_of_Three-Dimensional_Change_Detection_Methods
-    // Document See : http://www.gadom.ski/cpd
-    // Soure Code See : https://github.com/gadomski/cpd
-    FLOG::flog(">> Registering with %d Direction and %d Rotations ...\n", 
-        GlobParam::_GTryDirectionN, GlobParam::_GTryRotationN);
-    FLOG::pushIndent();
-    GlobParam::GTimer.start();
-    //------------------------
-    SRT SRTOut = PCRegister(PlyS_Samp, PlyR_Samp, GlobParam::_GTryDirectionN, GlobParam::_GTryRotationN);
-    delete PlyS_Samp;
-    delete PlyR_Samp;
-    //------------------------
-    FLOG::popIndent();
-    FLOG::flog(">> Registration Done in %.4f Seconds.\n", GlobParam::GTimer.elapsed() / 1000.0);
+        // III. Coherent Point Drift Point Set Registration 
+        // ~~~~~~~~~~~~~~~~~~
+        // Measuring Glacier Surface Velocities With LiDAR: A Comparison of Three-Dimensional Change Detection Methods.
+        // Master's thesis, University of Houston, Geosensing Systems Engineering and Sciences.
+        // by Gadomski, P.J. (December 2016). 
+        // ~~~~~~~~~~~~~~~~~~
+        // PDF See : https://www.researchgate.net/publication/315773214_Measuring_Glacier_Surface_Velocities_With_LiDAR_A_Comparison_of_Three-Dimensional_Change_Detection_Methods
+        // Document See : http://www.gadom.ski/cpd
+        // Soure Code See : https://github.com/gadomski/cpd
+        FLOG::flog(">> Registering with %d Direction and %d Rotations ...\n",
+            GlobParam::_GTryDirectionN, GlobParam::_GTryRotationN);
+        FLOG::pushIndent();
+        GlobParam::GTimer.start();
+        //------------------------
+        SRT SRTOut = PCRegister(PlyS_Samp, PlyR_Samp, GlobParam::_GTryDirectionN, GlobParam::_GTryRotationN);
+        delete PlyS_Samp;
+        delete PlyR_Samp;
+        //------------------------  
+        MeshModel *PlyR_Register = new MeshModel("", "");
+        Append<CMeshO, CMeshO>::MeshCopy(PlyR_Register->cm, PlyR_ori->cm);
+        PlyR_Register->Enable(PlyR_ori->mask());
+        PCTransform(PlyR_Register, SRTOut);
+        //------------------------
+        FLOG::popIndent();
+        FLOG::flog(">> Registration Done in %.4f Seconds.\n", GlobParam::GTimer.elapsed() / 1000.0);
 
 
-    // IV. Estmate PC Accuray and Completeness
+        // IV. Save Rigister Ply
+        FLOG::flog(">> Save Result Ply ...\n");
+        FLOG::pushIndent();
+        GlobParam::GTimer.start();
+        //------------------------  
+        FLOG::clog << " > Save Registered Ply ... \n";
+        PCSave(PlyR_Register, FilePlyRegisted.c_str());
+        FLOG::clog << " > Save Registered Ply with Jet Color and Chosen Color ... \n";
+
+        ifstream fin(FilePlyBox.c_str());
+        if (fin.is_open()) {
+            double x, y, z;
+            fin >> x >> y >> z;
+            fin.close();
+            PCSaveErrorCoded(PlyS_ori, PlyR_Register, z*GlobParam::_GMaxError, FilePlyRegistedJet.c_str(), FilePlyRegistedClr.c_str());
+        }
+        else
+            FLOG::clog << " > [Error] Laod Box File Failed : " << FilePlyBox << "\n";
+        //------------------------
+        FLOG::popIndent();
+        FLOG::flog(">> Save Done in %.4f Seconds.\n", GlobParam::GTimer.elapsed() / 1000.0);
+       
+        MeshModel *temp = PlyR_ori;
+        PlyR_ori = PlyR_Register;
+        PlyR_Register = temp;
+
+        delete PlyR_Register;
+    }
+
+    // V. Estmate PC Accuray and Completeness
     FLOG::flog(">> Estmate PC Accuray and Completeness ...\n");
     FLOG::pushIndent();
     GlobParam::GTimer.start();
     //------------------------  
-    MeshModel *PlyR_Register = new MeshModel("", "");
-    Append<CMeshO, CMeshO>::MeshCopy(PlyR_Register->cm, PlyR_ori->cm);
-    PlyR_Register->Enable(PlyR_ori->mask());
-    PCTransform(PlyR_Register, SRTOut);
-
+    
     MeshModel *PlyS_Est = PlyS_ori;
-    MeshModel *PlyR_Est = PlyR_Register;
+    MeshModel *PlyR_Est = PlyR_ori;
     MeshModel *Ply_toDelete = 0;
     if (PlyS_ori->cm.vn < PlyR_ori->cm.vn) {
         FLOG::flog(" > Sampling R Ply Data ...\n");
-        PlyR_Est = PCSample(PlyR_Register, PlyS_ori->cm.vn);
+        PlyR_Est = PCSample(PlyR_ori, PlyS_ori->cm.vn);
         Ply_toDelete = PlyR_Est;
     }
     else {
@@ -242,29 +272,6 @@ bool PCEst(const char *SPath, const char *RPath, const char *OutPath)
     FLOG::popIndent();
     FLOG::flog(">> Estmation Done in %.4f Seconds.\n", GlobParam::GTimer.elapsed() / 1000.0);
 
-    // V. Save Rigister Ply
-    FLOG::flog(">> Save Result Ply ...\n");
-    FLOG::pushIndent();
-    GlobParam::GTimer.start();
-    //------------------------  
-    FLOG::clog << " > Save Registered Ply ... \n";
-    PCSave(PlyR_Register, FilePlyRegisted.c_str());
-    FLOG::clog << " > Save Registered Ply with Jet Color and Chosen Color ... \n";
-    
-    ifstream fin(FilePlyBox.c_str());
-    if (fin.is_open()) {
-        double x, y, z;
-        fin >> x >> y >> z;
-        fin.close();
-        PCSaveErrorCodee(PlyS_ori, PlyR_Register, z*GlobParam::_GMaxError, FilePlyRegistedJet.c_str(), FilePlyRegistedClr.c_str());
-    }
-    else
-        FLOG::clog << " > [Error] Laod Box File Failed : " << FilePlyBox << "\n";
-    //------------------------
-    FLOG::popIndent();
-    FLOG::flog(">> Save Done in %.4f Seconds.\n", GlobParam::GTimer.elapsed() / 1000.0);
-
-    delete PlyR_Register;
     delete PlyS_ori;
     delete PlyR_ori;
 
@@ -473,7 +480,7 @@ double PCNearestDist(
     }
     return miu;
 }
-void PCSaveErrorCodee(
+void PCSaveErrorCoded(
     MeshModel *SMM, MeshModel *RMM, const double maxe, 
     const char *OutFileJet, const char *OutFileClr)
 {

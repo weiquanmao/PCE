@@ -12,7 +12,7 @@ struct SRT {
     vcg::Point3f translation;
 };
 
-bool PCEst(const char *SPath, const char *RPath, const char *OutPath);
+bool PCEst(const char *SPath, const char *RPath, const char *OutPath, const bool bReg = true);
 
 MeshModel* PCLoad(const char *Path);
 bool PCSave(MeshModel *MM, const char *Path);
@@ -28,7 +28,7 @@ SRT PCRegister(
 double PCNearestDist(
     MeshModel *SMM, MeshModel *RMM,
     double *sigma = 0, const char *OutFile = 0);
-void PCSaveErrorCodee(
+void PCSaveErrorCoded(
     MeshModel *SMM, MeshModel *RMM, const double maxe, 
     const char *OutFileJet, const char *OutFileClr = 0);
 #endif // __POINT_CLOUD_ESTIMATE_H
