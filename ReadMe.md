@@ -25,19 +25,21 @@ PCEst is a general tool for **accuracy** and **completeness** estimation of poin
 
 ### Step 0. Dimension Analysis of Ground Truth Model *G*
 
-To handle the scale variation in different point cloud data, we use a relative dimensional unit *U*=0.01*lD*, where *lD* is the minimum length of the edges of the minimum enclosing box of the ground truth model *G*. And project `PCPre` is used to estimate the minimum enclosing box by principal component analysis (PCA).
+To handle the scale variation in different point cloud data, we use a relative dimensional unit *U*=0.01*lD*, where *lD* is the minimum length of the edges of the minimum enclosing box of the ground truth model *G*.
+
+Project `PCPre` is used to estimate the minimum enclosing box by principal component analysis (PCA).
 
 ### Step 1. Registration and Estimation of Minimum Distance
 
 [**Coherent Point Drift (CPD)**](https://github.com/gadomski/cpd) is employed for registering. The ground truth model *G* and reference model *R* are first sampled, then *R* is registered to *G* with CPD, where multiple initial orientations are tested.
 
-The project `PCE` is used for registration, besides, it also gives the the minimum distances from both *R* to *G* (`\*\_R2S.txt`) and *G* to *R* (`\*\_S2R.txt`). The definition of minimum distance from one point cloud to another point cloud can refer to [Appendix B](https://www.tanksandtemples.org/tutorial/) of online tutorial of [1].
+The project `PCE` is used for registration, besides, it also gives the the minimum distances from both *R* to *G* (`*_R2S.txt`) and *G* to *R* (`*_S2R.txt`). The definition of minimum distance from one point cloud to another point cloud can refer to [Appendix B](https://www.tanksandtemples.org/tutorial/) of online tutorial of [1].
 
-### Step 2. Estimation of accuracy, completeness and F-scores
+### Step 2. Estimation of accuracy, completeness and F-score
 
-The estimation of accuracy, completeness and F-scores is same as [1,2], and the specific calculation details can refer to [Appendix B](https://www.tanksandtemples.org/tutorial/) of online tutorial of [1].
+The estimations of accuracy, completeness and F-score are same as [1,2], and the specific calculation details can refer to [Appendix B](https://www.tanksandtemples.org/tutorial/) of online tutorial of [1].
 
-The Matlab program implements the final estimation with minimum distance records `\*\_R2S.txt` and `\*\_S2R.txt`. Noted that the points with distance large than *10U* are ignored as outliers.
+The Matlab program implements the final estimation with minimum distance records `*_R2S.txt` and `*_S2R.txt`. Noted that points with distance large than *10U* are ignored as outliers.
 
 ## Examples
 
@@ -59,10 +61,10 @@ Acc50: the percentage of points with minimum distances within Acc50 is 50%;
 Acc90: the percentage of points with minimum distances within Acc90 is 90%;  
 A002: accuracy estimation result with distance threshold *2U*;  
 C002: completeness estimation result with distance threshold *2U*;  
-F002: F-scores estimation result with distance threshold *2U*;  
+F002: F-score estimation result with distance threshold *2U*;  
 A005: accuracy estimation result with distance threshold *5U*;  
 C005: completeness estimation result with distance threshold *5U*;  
-F005: F-scores estimation result with distance threshold *5U*;
+F005: F-score estimation result with distance threshold *5U*;
 
 The minimum distances in colors:
 
