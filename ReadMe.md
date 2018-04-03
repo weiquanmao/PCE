@@ -57,12 +57,12 @@ Estimation results of 8 space object point cloud in `TestData`.
 Mean: average of the minimum distances;  
 Acc50: the percentage of points with minimum distances within Acc50 is 50%;  
 Acc90: the percentage of points with minimum distances within Acc90 is 90%;  
-A002: accuracy estimation result with distance threshold **2U**;  
-C002: completeness estimation result with distance threshold **2U**;  
-F002: F-scores estimation result with distance threshold **2U**;  
-A005: accuracy estimation result with distance threshold **5U**;  
-C005: completeness estimation result with distance threshold **5U**;  
-F005: F-scores estimation result with distance threshold **5U**;
+A002: accuracy estimation result with distance threshold *2U*;  
+C002: completeness estimation result with distance threshold *2U*;  
+F002: F-scores estimation result with distance threshold *2U*;  
+A005: accuracy estimation result with distance threshold *5U*;  
+C005: completeness estimation result with distance threshold *5U*;  
+F005: F-scores estimation result with distance threshold *5U*;
 
 The minimum distances in colors:
 
