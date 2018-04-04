@@ -15,7 +15,7 @@ PCEst is a general tool for **accuracy** and **completeness** estimation of poin
 * PCE : register reference model *R* to ground truth model *G* and estimate the minimum distances from both *R* to *G* and *G* to *R*.
 * Matlab : deal with the minimum distances and give the accuracy and completeness evaluations, as well as the F-scores.
 
-## Dependence
+## Dependencies
 
 + [Qt](www.qt.io/download/)
 + [VCG Library](http://vcg.isti.cnr.it/vcglib/) (Embedded)
